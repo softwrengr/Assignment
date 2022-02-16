@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "749812300805",
+    "project_id": "assignment-da804",
+    "storage_bucket": "assignment-da804.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749812300805:android:1a430cf03ccc32b013706c",
+        "android_client_info": {
+          "package_name": "com.gts.assignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "749812300805-b60cbdr372mc4a6ffho1jqsgjgudut3m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcOq0YOVXHcKjHzHwEpIeNk-4bbvXfBsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "749812300805-b60cbdr372mc4a6ffho1jqsgjgudut3m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

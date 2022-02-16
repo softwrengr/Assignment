@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">مهمة</string>
+    <string name="language">لغة</string>
+    <string name="mode">الوضع</string>
+    <string name="message">التطبيق قيد الصيانة حاليًا ، قد تواجه صعوبة في استخدام بعض الميزات</string>
+</resources>

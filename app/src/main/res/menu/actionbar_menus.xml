@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_language"
+        android:title="@string/language"
+        android:icon="@drawable/language"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_mode"
+        android:title="@string/mode"
+        android:icon="@drawable/day_night"
+        app:showAsAction="ifRoom" />
+</menu>
