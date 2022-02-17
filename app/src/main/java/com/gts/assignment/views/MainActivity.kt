@@ -1,6 +1,5 @@
 package com.gts.assignment.views
 
-import android.content.Context
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -8,7 +7,6 @@ import android.view.View
 import com.gts.assignment.R
 import com.gts.assignment.base.BaseActivity
 import com.gts.assignment.databinding.ActivityMainBinding
-import com.gts.assignment.utils.LocaleHelper
 import com.gts.assignment.utils.MyDialog
 import com.gts.assignment.utils.MyExtensions.changeUIMode
 import dagger.hilt.android.AndroidEntryPoint
@@ -17,7 +15,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
-    private var isSetBanner: Boolean = false
+    private var isSet: Boolean = false
     private var message: String = ""
 
 
@@ -27,12 +25,26 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.title = getString(R.string.app_name)
 
-        isSetBanner = intent.extras?.getBoolean("isSetBanner") as Boolean
+        isSet = intent.extras?.getBoolean("isSetBanner") as Boolean
         message = intent.extras?.getString("message") as String
 
-        binding.tvMessage.text = message
-        if (isSetBanner) {
+        initView()
+    }
+
+
+    private fun initView() {
+
+        //if firebase message value is null or empty we will show the default text
+        if (message.isNullOrEmpty()) {
+            binding.tvMessage.text = getString(R.string.message)
+        } else {
+            binding.tvMessage.text = message
+        }
+
+        //checking either to show the banner or not as per firebase configuration
+        if (isSet) {
             binding.ivBanner.visibility = View.VISIBLE
         } else {
             binding.ivBanner.visibility = View.GONE
@@ -50,11 +62,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             R.id.action_mode -> changeUIMode(this)
         }
         return super.onOptionsItemSelected(item)
-    }
-
-
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(LocaleHelper.onAttach(newBase!!))
     }
 
 }

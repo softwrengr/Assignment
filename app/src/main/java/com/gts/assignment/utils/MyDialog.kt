@@ -1,10 +1,10 @@
 package com.gts.assignment.utils
 
 import android.app.Activity
-import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AlertDialog
+import com.gts.assignment.R
 import com.gts.assignment.views.SplashActivity
 
 class MyDialog {
@@ -12,12 +12,12 @@ class MyDialog {
     companion object {
 
         fun setLanguage(context: Activity) {
-            var mySharePreference: MySharePreference = MySharePreference.getInstance(context)
+            val mySharePreference: MySharePreference = MySharePreference.getInstance(context)
 
             val language = arrayOf("English", "العربية")
             val checkedItem = if (mySharePreference.getLanguage().equals("en", ignoreCase = true)) 0 else 1
             val builder = AlertDialog.Builder(context)
-            builder.setTitle("Select Language")
+            builder.setTitle(context.getString(R.string.select_lang))
             builder.setSingleChoiceItems(language, checkedItem) { dialog: DialogInterface, item: Int ->
                 if ("English".equals(language[item], ignoreCase = true)) {
                     mySharePreference.setLanguage("en")

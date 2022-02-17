@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Assignment</string>
+    <string name="welcome">Welcome</string>
     <string name="language">Language</string>
     <string name="mode">Mode</string>
+    <string name="select_lang">Select Language</string>
     <string name="message">The app is currently under maintenance; you might face difficulty in using some features.</string>
 </resources>

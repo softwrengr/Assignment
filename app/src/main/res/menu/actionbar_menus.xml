@@ -4,13 +4,13 @@
 
     <item
         android:id="@+id/action_language"
-        android:title="@string/language"
         android:icon="@drawable/language"
+        android:title="@string/language"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_mode"
-        android:title="@string/mode"
         android:icon="@drawable/day_night"
+        android:title="@string/mode"
         app:showAsAction="ifRoom" />
 </menu>

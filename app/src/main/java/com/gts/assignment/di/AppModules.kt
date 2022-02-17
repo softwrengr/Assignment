@@ -10,7 +10,7 @@ import javax.inject.Singleton
 
 /**
  * The Dagger Module for providing instances.
- * We can add other modules here as well
+ * We can add other modules here as well like repository module if we are using usecases
  */
 
 @Module

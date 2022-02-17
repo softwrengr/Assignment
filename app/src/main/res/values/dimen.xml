@@ -3,4 +3,7 @@
     <dimen name="low_margin">4dp</dimen>
     <dimen name="medium_margin">10dp</dimen>
     <dimen name="standard_margin">16dp</dimen>
+
+    <dimen name="large_textsize">24sp</dimen>
+    <dimen name="textsize20">20sp</dimen>
 </resources>

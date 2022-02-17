@@ -6,7 +6,6 @@ import android.preference.PreferenceManager
 
 class MySharePreference(context: Context?) {
 
-    private var instance: MySharePreference? = null
     private var pref: SharedPreferences? = null
 
 
@@ -29,7 +28,6 @@ class MySharePreference(context: Context?) {
             }
             return instance
         }
-
 
     }
 
